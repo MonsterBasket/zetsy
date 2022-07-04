@@ -1,13 +1,21 @@
 /*////////////// Fonts //////////////*/
-
-/* link the web font used for the level 1 heading here */
-
+@font-face {
+	font-family: 'Baskerville'; /* I had to look at the source code for this, no idea how I would have worked it out otherwise */
+	src: url(../fonts/Baskerville.ttc);
+}
 /*////////// Global Styles //////////*/
+
+:root {
+	--grey1: #ccc;
+	--grey2: rgb(152,173,166);
+	--grey3: rgb(111,127,122);
+  }
 
 body {
 	background: #F3EBE9;
 	font-size: 100%;
 	font-family: 'Times New Roman', serif; 
+	color: #555;
 }
 
 .wrapper {
@@ -16,5 +24,53 @@ body {
 	background: #fff;
 	padding: 0 45px 20px;
 }
-
-/* Write all remaining styles here */
+h1{
+	font-family: 'Baskerville', serif;
+	color: var(--grey2);
+	font-size: 5em;
+	margin: 0 auto;
+}
+.zetsy:hover{ /*makes the colour change only when hovering over the word, not the whole row */
+	color:var(--grey3);
+}
+h2{
+	color: var(--grey3);
+	font-size: 2em;
+}
+hr{
+	border: 0px;
+	height: 1px;
+	color: var(--grey1);
+	background-color: var(--grey1);
+	margin: 10px auto 0.3em; /* can you say "anal"? */
+}
+.mainImage{
+	margin: 5px;
+	box-shadow: 0 0 0 5px var(--grey2); /* prevents the glitchy one pixel "padding" that appears when using border */
+}
+a{
+	color: #1783bb;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration:underline;
+}
+section{
+	display:flex;
+	justify-content: space-between;
+}
+article{
+	display: inline-block;
+	box-sizing: content-box;
+	width:224px;
+	height:143px;
+	margin: 5px;
+	box-shadow: 0 0 0 5px var(--grey1);
+}
+article:hover{
+	box-shadow: 0 0 0 5px var(--grey3);
+}
+.foot{
+	text-align: right;
+	font-size: 0.8em;
+}
